@@ -12,8 +12,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Postagem  {
+
+
     @Id
-    private Long id;
+    private String id;
     private String nome;
     private String message;
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ExercicioConsumer/ExercicioConsumer.iml" filepath="$PROJECT_DIR$/ExercicioConsumer/ExercicioConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExercicioProducer/ExercicioProducer.iml" filepath="$PROJECT_DIR$/ExercicioProducer/ExercicioProducer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/exercMicroservices.iml" filepath="$PROJECT_DIR$/.idea/exercMicroservices.iml" />
+    </modules>
+  </component>
+</project>
