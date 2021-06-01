@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /postagem
+
+spring:
+  application:
+    name: postagem
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: postconsumer
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+postagem:
+  rabbitmq:
+    exchange: postagem.exchange
+    queue: postagem.queue
