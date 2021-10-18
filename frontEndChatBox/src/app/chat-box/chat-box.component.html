@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container mt-100">
+
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="text-center">Chat Patagonia</h2>
+    </div>
+  </div>
+
+  <div class="row mt-3 mt-5 d-flex">
+    <div class="col-md-12">
+      <table class="table table-hover">
+        <thead></thead>
+        <tbody>
+          <tr *ngFor="let item of listaPostagem">
+            <th>{{item.message}}</th>
+            <td class="d fjustify-content-end"> {{item.nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-floating">
+        <input type="box"  class="form-control" id="box" placeholder="box" (keyup.enter) = "post()" [(ngModel)]='postagem.message'>
+        <label for="floatingPassword">Type here</label>
+      </div>
+    </div>
+  </div>
+</div>
