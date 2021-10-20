@@ -21,16 +21,8 @@ public class UsuarioService {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
         String senhaEncoder = encoder.encode(usuario.getSenha());
-        String nomeEncoder = encoder.encode(usuario.getNome());
-        String usuarioEncoder = encoder.encode(usuario.getUsuario());
-        String emailEncoder = encoder.encode(usuario.getEmail());
-        String endereçoEncoder = encoder.encode(usuario.getEndereço());
 
         usuario.setSenha(senhaEncoder);
-        usuario.setNome(nomeEncoder);
-        usuario.setUsuario(usuarioEncoder);
-        usuario.setEmail(emailEncoder);
-        usuario.setEndereço(endereçoEncoder);
 
         return repository.save(usuario);
     }
@@ -45,10 +37,11 @@ public class UsuarioService {
                 byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
                 String authHeader = "Basic " + new String(encodedAuth);
 
+                user.get().setId(usuario.get().getId());
                 user.get().setToken(authHeader);
                 user.get().setNome(usuario.get().getNome());
                 user.get().setTipo(usuario.get().getTipo());
-                user.get().setEmail(usuario.get().getEmail());
+
                 return user;
             }
         }

@@ -11,6 +11,11 @@ spring:
       port: 5672
       username: guest
       password: guest
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: postconsumer
 
 postagem:
   rabbitmq:

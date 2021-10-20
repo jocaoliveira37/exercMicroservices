@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { HeaderComponent } from './header/header.component';
+import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatBoxComponent,
-    HeaderComponent
+    HeaderComponent,
+    EntrarComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,

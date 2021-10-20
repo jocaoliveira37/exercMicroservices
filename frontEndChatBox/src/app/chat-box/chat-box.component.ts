@@ -2,6 +2,7 @@ import { PostagemService } from './../service/postagem.service';
 import { Postagem } from './../model/Postagem';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-chat-box',
@@ -9,6 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./chat-box.component.css']
 })
 export class ChatBoxComponent implements OnInit {
+
+  nome = environment.nome
+  id = environment.id
 
   listaPostagem!: Postagem[]
   postagem: Postagem = new Postagem();
@@ -19,7 +23,13 @@ export class ChatBoxComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
+
     this.getAllPostagem()
+    this.postagem.nome = this.nome
   }
 
   getAllPostagem() {
